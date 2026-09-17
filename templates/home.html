@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <nav> <a href="{{url_for('home')}}">HOME</a>|
+    <a href="{{url_for('employees')}}">Employees</a>|
+    <a href="{{url_for('add_employee')}}">Add Employee</a>
+    </nav>
+    
+    
+    <div class="home-container">
+    <h1>Employee Management System</h1>
+    <p>Manage employee records using Flask and SQLAlchemy.</p>
+
+    <a class="home-btn" href="{{url_for('employees')}}">View Employees</a>
+    <a class="home-btn" href="{{url_for('add_employee')}}">Add Employee</a>
+    </div>
+    
+</body>
+</html>

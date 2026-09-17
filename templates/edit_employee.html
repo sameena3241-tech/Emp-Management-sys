@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Employee</title> <!----Css link---->
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <nav> <!----Navigate---->
+        <a href="{{url_for('home')}}">HOME</a>|<a href="{{url_for('employees')}}">Employees</a>|<a href="{{url_for('add_employee')}}">
+        Add Employee</a>
+    </nav>
+    
+    <h1>Edit Employee</h1> <!----Flash message---->
+
+    {% with messages= get_flashed_messages("with_categories=true") %}
+    {% for category,message in messages %}
+    <p class="flash {{category}}">{{message}}</p>
+    {% endfor %}
+    {% endwith %}
+
+    <form method="POST">
+
+    <label>Employee ID</label>
+    <input type="text" name="emp_id" value="{{employee.id}}" disabled>
+    <br><br>
+
+    <label>Name</label>
+    <input type="text" name="name" value="{{employee.name}}" >
+    <br><br>
+
+    <label>Department</label>
+    <input type="text" name="department" value="{{employee.department}}" required>
+    <br><br>
+
+    <label>Salary</label>
+    <input type="text" name="salary" value="{{employee.salary}}" step="0.01" required>
+    <br><br>
+
+    <button type="submit" >Update Employee</button>
+    </form>
+    <br>
+    <a href="{{url_for('employees')}}">Back to the Employee</a>
+
+</body>
+</html>
