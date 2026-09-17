@@ -44,26 +44,30 @@ Emp-Management-sys/
 ## ⚙️ Installation & Setup
 
 ### 1. Clone the Repository
-```
-git clone <https://github.com/sameena3241-tech/Emp-Management-sys.git>
+
+```bash
+git clone https://github.com
 ```
 
 ### 2. Navigate to the Project Folder
-
+```
 cd Emp-Management-sys
+```
 
-### 5. Install Dependencies
-
+### 3. Install Dependencies
+```
 pip install -r requirements.txt
+```
 
-### 6. Run the Application
+### 4. Run the Application
 ```
 python Ems.py
 ```
 
-### 7. Open in Browser
-
+### 5. Open in Browser
+```
 <http://localhost:5000/>
+```
 
 ## 🖥️ Application Menu
 The application features a clean navigation menu at the top:
